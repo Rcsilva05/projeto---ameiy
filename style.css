@@ -453,6 +453,12 @@ h2::after {
         font-size: 1rem;
     }
 
+    .hero-stats {
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
     .checkbox-item {
         justify-content: flex-start;
         font-size: 0.9rem;
@@ -467,8 +473,9 @@ h2::after {
     }
 
     .stat-item {
-        width: 100%;
-        padding: 20px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
     }
 }
 
