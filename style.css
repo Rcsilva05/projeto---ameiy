@@ -454,10 +454,13 @@ h2::after {
     }
 
     .hero-stats {
-        align-items: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 30px auto 0;
+    width: 100%;
+  }
 
     .checkbox-item {
         justify-content: flex-start;
@@ -473,10 +476,10 @@ h2::after {
     }
 
     .stat-item {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 100% !important;
-    }
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
