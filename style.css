@@ -1277,7 +1277,7 @@ h2::after {
 }
 
 .footer-social a:hover {
-    color: #ddd; /* Cor mais clara no hover */
+    color: #ddd;
 }
 
 .footer-content {
@@ -1386,13 +1386,30 @@ h2::after {
 .footer-bottom p:last-child {
     margin-bottom: 0;
 }
+
 @media (max-width: 768px) {
     .footer-social {
         margin: 15px 0;
     }
+    
     .footer-social a {
         font-size: 1.3rem;
         margin-right: 10px;
+    }
+    
+    /* Nova regra para corrigir a cor dos telefones e CEP */
+    .footer p[style*="font-weight: 500"],
+    .footer p[style*="opacity: 0.9"] {
+        color: white !important;
+        text-decoration: none !important;
+    }
+    
+    .footer div > div > p[style*="font-weight: 500"] {
+        color: white !important;
+    }
+    
+    .footer div > div > p[style*="opacity: 0.9"]:last-child {
+        color: white !important;
     }
 }
 
