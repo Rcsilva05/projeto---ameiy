@@ -286,9 +286,6 @@ h2::after {
     font-family: 'Poppins', sans-serif;
 }
 
-.hero-text strong {
-    color: var(--primary-blue);
-}
 
 .hero-cta {
     margin-top: 40px;
@@ -306,6 +303,7 @@ h2::after {
     margin-bottom: 20px;
     font-family: 'Poppins', sans-serif;
     border: 2px solid var(--white);
+    text-align: center;
 
 }
 
