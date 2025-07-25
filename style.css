@@ -572,7 +572,7 @@ h2::after {
 }
 
 .treatment-block {
-  background: rgba(9, 87, 175, 0.05); /* Azul claro com 5% de opacidade */
+  background: rgba(9, 87, 175, 0.1); /* azul claro com 10% de opacidade */
   border-radius: 8px;
   padding: 10px;
   text-align: center;
@@ -587,7 +587,6 @@ h2::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .treatment-icon {
