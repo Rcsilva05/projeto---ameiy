@@ -564,71 +564,77 @@ h2::after {
 }
 
 /* Seção de especialidades */
-.treatment-blocks {
-    padding: 120px 0;
-    background-color: #f9fafc;
-}
-
 .treatment-blocks-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 colunas iguais */
-    gap: 15px;
-    margin-top: 40px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Menor espaçamento */
+    margin-top: 30px;
 }
 
 .treatment-block {
     background: var(--white);
-    border-radius: 10px;
-    padding: 25px 15px; /* Ajuste no padding para caber melhor */
+    border-radius: 8px;
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     text-decoration: none;
     color: var(--dark-gray);
-    border-top: 4px solid var(--primary-blue);
-    min-height: 200px; /* Altura uniforme */
+    border-top: 3px solid var(--primary-blue);
+    min-height: 140px;
+    min-width: 120px;
+    max-width: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.treatment-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
 .treatment-icon {
-    font-size: 2rem; /* Reduzi um pouco o tamanho do ícone */
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 8px;
     color: var(--primary-blue);
 }
 
 .treatment-block h3 {
-    font-size: 1.1rem; /* Tamanho ajustado para caber melhor */
-    margin-bottom: 10px;
+    font-size: 13px;
+    margin-bottom: 4px;
 }
 
 .treatment-block p {
-    font-size: 0.9rem; /* Texto um pouco menor */
+    font-size: 10px;
+    line-height: 1.2;
 }
 
-/* Responsividade para telas menores */
+/* Responsivo */
 @media (max-width: 1200px) {
     .treatment-blocks-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .treatment-blocks-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .treatment-block {
+        min-height: 140px;
+        padding: 15px 8px;
+    }
+
+    .treatment-icon {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .treatment-block h3 {
+        font-size: 0.85rem;
+    }
+
+    .treatment-block p {
+        font-size: 0.7rem;
     }
 }
-
-.social-icons {
-        top: 20px;
-        right: 20px;
-    }
 
     
 
