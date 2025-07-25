@@ -587,6 +587,7 @@ h2::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .treatment-icon {
@@ -696,7 +697,143 @@ h2::after {
     font-size: 1.5rem;
 }
 
+.treatment-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
 
+.treatment-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.treatment-section h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.treatment-section .section-subtitle {
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Grid de Tratamentos */
+.treatment-blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.treatment-block {
+    background: rgba(9, 87, 175, 0.2); /* Azul com 20% de opacidade */
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(9, 87, 175, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: #333;
+    border-top: 3px solid var(--primary-blue);
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.treatment-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(9, 87, 175, 0.15);
+    background: rgba(9, 87, 175, 0.25);
+}
+
+.treatment-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+.treatment-block h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.treatment-block p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .treatment-blocks-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .treatment-section {
+        padding: 40px 0;
+    }
+    
+    .treatment-blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .treatment-block {
+        min-height: 130px;
+        padding: 15px 8px;
+    }
+    
+    .treatment-icon {
+        font-size: 1.5rem;
+    }
+    
+    .treatment-block h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .treatment-blocks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .treatment-block {
+        min-height: auto;
+        padding: 20px;
+        flex-direction: row;
+        text-align: left;
+        gap: 15px;
+    }
+    
+    .treatment-icon {
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+    
+    .treatment-content {
+        text-align: left;
+    }
+    
+    .treatment-block h3 {
+        font-size: 1rem;
+    }
+    
+    .treatment-block p {
+        font-size: 0.8rem;
+    }
+}
 
 /* Seção Tratamentos - Layout Alternado */
 /* Seção Tratamentos - Layout Alternado */
