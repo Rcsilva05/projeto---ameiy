@@ -713,6 +713,13 @@ h2::after {
     padding: 0 20px;
 }
 
+.section-title {
+    text-align: center;
+    color: #016fca;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
 .section-subtitle {
     text-align: center;
     font-size: 1.2rem;
@@ -720,16 +727,13 @@ h2::after {
     margin-bottom: 60px;
 }
 
-.alternating-treatments {
-    display: flex;
-    flex-direction: column;
-    gap: 80px; /* Aumentei o gap para mais espaçamento */
-}
-
 .treatment-row {
     display: flex;
     align-items: center;
-    gap: 50px; /* Aumentei o gap entre texto e imagem */
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 32px;
 }
 
 .treatment-row.reverse {
@@ -738,12 +742,12 @@ h2::after {
 
 .treatment-info {
     flex: 1;
-    padding: 40px 30px; /* Aumentei o padding interno */
+    min-width: 300px;
 }
 
 .treatment-info h3 {
     color: #016fca;
-    font-size: 2rem; /* Aumentei o tamanho da fonte */
+    font-size: 2rem;
     margin-bottom: 25px;
     position: relative;
     padding-bottom: 15px;
@@ -751,35 +755,35 @@ h2::after {
 }
 
 .treatment-info h3::after {
-    content: '';
+    
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80px; /* Aumentei a largura da linha */
-    height: 4px; /* Aumentei a espessura */
-    background: linear-gradient(to right, #016fca, #4a90e2); /* Adicionei gradiente */
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #016fca, #4a90e2);
     border-radius: 2px;
 }
 
 .treatment-info p {
     color: #4a5568;
     margin-bottom: 25px;
-    line-height: 1.8; /* Aumentei o line-height */
-    font-size: 1.1rem; /* Aumentei o tamanho da fonte */
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
-.treatment-benefits ul {
+.treatment-benefits {
   list-style: none;
-  padding-left: 0; /* remove recuo da lista */
+  padding-left: 0;
+  margin: 0;
 }
 
 .treatment-benefits li {
-    list-style: none; /* Remover as bolinhas! */
     color: #2d3748;
     margin-bottom: 12px;
     position: relative;
-    padding-left: 30px; /* Aumentei o padding */
-    font-size: 1.05rem; /* Aumentei o tamanho da fonte */
+    padding-left: 30px;
+    font-size: 1.05rem;
     line-height: 1.6;
 }
 
@@ -790,7 +794,7 @@ h2::after {
     color: #016fca;
     position: absolute;
     left: 0;
-    font-size: 1.2rem; /* Aumentei o tamanho do ícone */
+    font-size: 1.2rem;
 }
 
 .treatment-image {
@@ -799,6 +803,7 @@ h2::after {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    min-width: 300px;
 }
 
 .treatment-image:hover {
@@ -808,149 +813,83 @@ h2::after {
 
 .treatment-image img {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.btn-know-more {
-    display: inline-block;
-    padding: 14px 35px;
-    background: linear-gradient(to right, #016fca, #4a90e2);
-    color: white;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(1, 111, 202, 0.3);
-    font-size: 1.05rem;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-know-more:hover {
-    background: linear-gradient(to right, #0155a5, #3b7fd3);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(1, 111, 202, 0.4);
-}
-
-/* Responsividade - Mobile */
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    .white-section {
-        padding: 60px 0;
-        
-    
-    
-    .alternating-treatments {
-        gap: 60px; /* Espaçamento maior entre os tratamentos no mobile */
-    }
-    
     .treatment-row,
     .treatment-row.reverse {
         flex-direction: column;
-        gap: 40px; /* Aumentei o gap entre imagem e texto no mobile */
-    }
-
-    
-    
-    .treatment-info {
-        padding: 0;
-        order: 2; /* Garante que o texto vem depois da imagem */
-    }
-    
-    .treatment-image {
-        order: 1; /* Garante que a imagem vem antes do texto */
-        margin-bottom: 20px; /* Espaço adicional abaixo da imagem */
-        width: 100%;
-        max-width: 400px; /* Limite de largura para a imagem */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .treatment-blocks {
-    padding: 40px 0;
-  }
-  
-  .treatment-blocks-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    width: 100% !important;
-    padding: 0 10px !important;
-  }
-  
-  .treatment-block {
-    min-width: 100% !important;
-    max-width: 100% !important;
-    padding: 15px !important;
-    border-radius: 10px !important;
-  }
-  
-  .treatment-icon {
-    font-size: 22px !important;
-  }
-  
-  h3 {
-    font-size: 14px !important;
-  }
-  
-  p {
-    font-size: 11px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .treatment-blocks-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .treatment-block {
-    padding: 14px !important;
-  }
-}
-    
-    .treatment-info h3 {
-        font-size: 1.7rem;
+        gap: 30px;
         text-align: center;
     }
-    
+
+    .treatment-info {
+        padding: 0 15px;
+    }
+
+    .treatment-info h3 {
+        font-size: 1.7rem;
+    }
+
     .treatment-info h3::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .treatment-info p {
-        text-align: center;
         font-size: 1.05rem;
     }
-    
+
     .treatment-benefits {
         padding: 0 15px;
     }
-    
-    .btn-know-more {
-        display: block;
-        max-width: 250px;
+
+    .treatment-image {
+        width: 100%;
+        max-width: 400px;
         margin: 0 auto;
-        text-align: center;
-        margin-top: -15px; /* Isso vai subir o botão 15px */
-        margin-bottom: 15px; /* Compensa o espaço removido de cima */
+        order: -1; /* imagem vem antes do texto no mobile */
+    }
+
+    .treatment-image img {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .treatment-image {
-        margin-bottom: 30px; /* Espaço ainda maior em telas pequenas */
-    }
-    
     .treatment-info h3 {
         font-size: 1.6rem;
     }
-    
+
+    .treatment-image {
+        margin-bottom: 30px;
+    }
+
+    .treatment-benefits li {
+        font-size: 1rem;
+    }
+
+    .treatment-info p {
+        font-size: 1rem;
+    }
+
     .btn-know-more {
         padding: 12px 30px;
     }
 }
+
+.btn-know-more {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
 
 /* ========== FAQ SECTION ========== */
 .faq-section {
