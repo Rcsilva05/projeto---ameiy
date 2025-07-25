@@ -838,7 +838,7 @@ h2::after {
     .white-section {
         padding: 60px 0;
         
-    }
+    
     
     .alternating-treatments {
         gap: 60px; /* Espaçamento maior entre os tratamentos no mobile */
@@ -849,6 +849,8 @@ h2::after {
         flex-direction: column;
         gap: 40px; /* Aumentei o gap entre imagem e texto no mobile */
     }
+
+    
     
     .treatment-info {
         padding: 0;
@@ -863,6 +865,48 @@ h2::after {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .treatment-blocks {
+    padding: 40px 0;
+  }
+  
+  .treatment-blocks-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+  
+  .treatment-block {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+  }
+  
+  .treatment-icon {
+    font-size: 22px !important;
+  }
+  
+  h3 {
+    font-size: 14px !important;
+  }
+  
+  p {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .treatment-blocks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .treatment-block {
+    padding: 14px !important;
+  }
+}
     
     .treatment-info h3 {
         font-size: 1.7rem;
