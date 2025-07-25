@@ -572,21 +572,21 @@ h2::after {
 }
 
 .treatment-block {
-    background: var(--white);
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    text-decoration: none;
-    color: var(--dark-gray);
-    border-top: 3px solid var(--primary-blue);
-    min-height: 140px;
-    min-width: 120px;
-    max-width: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: rgba(9, 87, 175, 0.05); /* Azul claro com 5% de opacidade */
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  text-decoration: none;
+  color: var(--dark-gray);
+  border-top: 3px solid var(--primary-blue);
+  min-height: 140px;
+  min-width: 120px;
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .treatment-icon {
